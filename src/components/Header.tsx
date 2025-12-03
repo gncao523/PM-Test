@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import flagIcon from '../assets/images/ukflag.png'
+import userIcon from '../assets/images/user.png'
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -48,60 +49,46 @@ const Header: React.FC = () => {
 
           {/* Center - Main navigation links - Desktop only */}
           <div className="hidden lg:flex items-center gap-7">
-            <a href="#" className="text-gray-700 hover:text-gray-900 text-sm font-semibold flex items-center gap-3">
+            <a href="#" className="text-[#010205] hover:text-gray-900 text-md font-normal flex items-center gap-3">
               Trading
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 text-sm font-semibold flex items-center gap-3">
+            <a href="#" className="text-[#010205] hover:text-gray-900 text-md font-normal flex items-center gap-3">
               Discover
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 text-sm font-semibold flex items-center gap-3">
+            <a href="#" className="text-[#010205] hover:text-gray-900 text-md font-normal flex items-center gap-3">
               Promotions
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 text-sm font-semibold flex items-center gap-3">
+            <a href="#" className="text-[#010205] hover:text-gray-900 text-md font-normal flex items-center gap-3">
               Company
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            {/* Partner with us link - Desktop only */}
+            <a href="#" className="hidden lg:flex items-center gap-3 text-[red] hover:text-premier-red-dark text-md font-normal">
+              Partner with us
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </a>
           </div>
 
           {/* Right side - Partner link, Register button, and icons */}
           <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
-            {/* Partner with us link - Desktop only */}
-            <a href="#" className="hidden lg:flex items-center gap-3 text-premier-red hover:text-premier-red-dark text-sm font-semibold">
-              Partner with us
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-
             {/* Register button - Hidden on very small screens, shown on sm+ */}
-            <button className="hidden sm:block bg-premier-red text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-md text-xs sm:text-sm font-semibold hover:bg-premier-red-dark transition-colors shadow-sm">
+            <button className="hidden sm:block bg-[red] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold hover:bg-premier-red-dark transition-colors shadow-sm cursor-pointer">
               Register
             </button>
-
-            {/* Two circular icons - Hidden on very small screens */}
-            <div className="hidden sm:flex items-center gap-2">
-              <button className="w-8 h-8 sm:w-9 sm:h-9 bg-premier-red rounded-full flex items-center justify-center text-white hover:bg-premier-red-dark transition-colors">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </button>
-              <button className="w-8 h-8 sm:w-9 sm:h-9 bg-pink-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-pink-300 transition-colors">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </button>
-            </div>
+            <img src={userIcon} alt="userIcon" className="w-6 h-6 cursor-pointer" />
 
             {/* Mobile menu button */}
             <button
