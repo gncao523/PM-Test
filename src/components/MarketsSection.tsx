@@ -75,10 +75,10 @@ const MarketsSection: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-gilroy font-bold text-white mb-4" style={{ fontFamily: "'Gilroy', system-ui, -apple-system, sans-serif" }}>
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-gilroy font-['Gilroy'] text-white mb-4">
             Access <span className="text-[red]">17,000+</span> <br/> markets all in one
           </h2>
-          <p className="text-lg lg:text-xl text-white max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-white max-w-3xl mx-auto font-['UrbanistRegular'] py-4">
             Trade forex, shares, indices, and commodities with competitive spreads, deep liquidity, and seamless execution.
           </p>
         </div>
@@ -91,12 +91,12 @@ const MarketsSection: React.FC = () => {
               className="box-border p-[1px] bg-gradient-to-r from-[#AD1D25] to-[#FF9595] rounded-[30px] shadow-[0px_4px_30px_rgba(255,0,0,0.45),inset_0px_4px_20px_rgba(0,0,0,0.25)]"
             >
               <button
-                className="w-full flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#900003] to-[#730307] rounded-[30px] text-white hover:opacity-90 transition-opacity cursor-pointer"
+                className="w-full flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#900003] to-[#730307] rounded-[30px] text-white hover:opacity-90 transition-opacity cursor-pointer font-['UrbanistRegular']"
               >
                 <span className="flex items-center justify-center w-8 h-8 bg-premier-red rounded-full">
                   {feature.icon}
                 </span>
-                <span className="font-medium" style={{ fontFamily: "'Gilroy', system-ui, -apple-system, sans-serif" }}>{feature.text}</span>
+                <span className="font-medium font-gilroy">{feature.text}</span>
               </button>
             </div>
           ))}
@@ -111,9 +111,9 @@ const MarketsSection: React.FC = () => {
             >
               <div className="h-full rounded-[40px] bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
                 <div className="text-premier-red mb-4">{card.icon}</div>
-                <h3 className="text-xl font-gilroy font-bold text-black mb-3" style={{ fontFamily: "'Gilroy', system-ui, -apple-system, sans-serif" }}>{card.title}</h3>
+                <h3 className="text-xl font-['Gilroy'] text-black mb-3">{card.title}</h3>
                 <div className="border-b border-gray-300 mb-3"></div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4" style={{ fontFamily: "'Gilroy', system-ui, -apple-system, sans-serif" }}>{card.description}</p>
+                <p className="text-gray-700 text-md leading-relaxed mb-4 font-['UrbanistRegular']">{card.description}</p>
                 <div className="flex justify-end">
                   <svg
                     className="w-5 h-5 text-gray-400 group-hover:text-premier-red transition-colors"

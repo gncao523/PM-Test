@@ -10,13 +10,13 @@ const Header: React.FC = () => {
       {/* Top bar - responsive */}
       <div className="border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-1 flex items-center justify-between flex-wrap gap-1.5 sm:gap-2">
-          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
-            <a href="#" className="text-[10px] sm:text-xs md:text-sm font-bold underline underline-offset-10 sm:underline-offset-18 decoration-[2px] !text-[red] decoration-premier-red whitespace-nowrap">Personal</a>
+          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 font-['Urbanist']">
+            <a href="#" className="text-[10px] sm:text-xs md:text-sm underline underline-offset-10 sm:underline-offset-18 decoration-[2px] !text-[red] decoration-premier-red whitespace-nowrap">Personal</a>
             <div className="w-px h-3 bg-gray-300"></div>
-            <a href="#" className="text-[10px] sm:text-xs md:text-sm lg:text-md font-bold whitespace-nowrap">Institutional</a>
+            <a href="#" className="text-[10px] sm:text-xs md:text-sm lg:text-md whitespace-nowrap">Institutional</a>
           </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-5 flex-wrap">
+          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-5 flex-wrap font-['Urbanist']">
             <a href="#" className="text-[10px] sm:text-xs md:text-sm lg:text-md hover:text-gray-900 font-bold whitespace-nowrap">WebTrader</a>
             <a href="#" className="text-[10px] sm:text-xs md:text-sm lg:text-md hover:text-gray-900 font-bold whitespace-nowrap">Support</a>
             <a href="#" className="text-[10px] sm:text-xs md:text-sm lg:text-md hover:text-gray-900 font-bold whitespace-nowrap">Open Demo</a>
@@ -41,21 +41,21 @@ const Header: React.FC = () => {
               <path fillRule="evenodd" clipRule="evenodd" d="M49.2932 2.04643C48.9271 0.831517 47.8082 0 46.5392 0C44.3067 0 40.7563 0 38.0285 0C37.1187 0 36.2625 0.430571 35.72 1.16084C35.1773 1.89112 35.0122 2.8351 35.2748 3.70602C36.2932 7.08558 37.7604 11.9547 38.5818 14.68C38.9477 15.8949 40.0668 16.7261 41.3355 16.7261C43.5684 16.7261 47.1188 16.7261 49.8463 16.7261C50.7563 16.7261 51.6123 16.2958 52.155 15.5656C52.6978 14.8353 52.8629 13.8913 52.6003 13.0201C51.5818 9.64053 50.1144 4.77137 49.2932 2.04643Z" fill="#ED1D25" />
             </svg>
 
-            <div className="flex flex-col leading-tight">
+            <div className="flex flex-col leading-tight font-['Urbanist']">
               <span className="font-black text-lg sm:text-xl md:text-2xl tracking-tight lowercase">premier</span>
               <span className="font-black text-lg sm:text-xl md:text-2xl tracking-tight lowercase">markets</span>
             </div>
           </div>
 
           {/* Center - Main navigation links - Desktop only */}
-          <div className="hidden lg:flex items-center gap-7">
-            <a href="#" className="text-[#010205] hover:text-gray-900 text-md font-normal flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-7 font-['UrbanistRegular']">
+            <a href="#" className="text-[#010205] hover:text-gray-900 text-md flex items-center gap-3">
               Trading
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </a>
-            <a href="#" className="text-[#010205] hover:text-gray-900 text-md font-normal flex items-center gap-3">
+            <a href="#" className="text-[#010205] hover:text-gray-900 text-md  flex items-center gap-3">
               Discover
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
           {/* Right side - Partner link, Register button, and icons */}
           <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
             {/* Register button - Hidden on very small screens, shown on sm+ */}
-            <button className="hidden sm:block bg-[red] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold hover:bg-premier-red-dark transition-colors shadow-sm cursor-pointer">
+            <button className="hidden sm:block bg-[red] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm hover:bg-premier-red-dark transition-colors shadow-sm cursor-pointer font-['Urbanist']">
               Register
             </button>
             <img src={userIcon} alt="userIcon" className="w-6 h-6 cursor-pointer" />
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
               </a>
 
               {/* Mobile Partner link */}
-              <a href="#" className="flex items-center justify-between text-premier-red hover:text-premier-red-dark text-sm font-semibold py-2">
+              <a href="#" className="flex items-center justify-between text-[red] hover:text-premier-red-dark text-sm font-semibold py-2">
                 Partner with us
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -148,7 +148,7 @@ const Header: React.FC = () => {
               </a>
               
               {/* Mobile Register button */}
-              <button className="bg-[red] text-white px-6 py-2.5 rounded-md text-sm font-semibold hover:bg-premier-red-dark transition-colors shadow-sm w-full sm:hidden">
+              <button className="bg-[red] text-white px-6 py-2.5 rounded-md text-sm hover:bg-premier-red-dark transition-colors shadow-sm w-full sm:hidden font-['Urbanist']">
                 Register
               </button>
             </div>

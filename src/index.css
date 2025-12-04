@@ -3,17 +3,33 @@
 @font-face {
   font-family: 'Urbanist';
   src: url('./assets/fonts/Urbanist-SemiBold.ttf') format('truetype');
-  font-weight: 600;
   font-style: normal;
   font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'UrbanistRegular';
+  src: url('./assets/fonts/Urbanist-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Gilroy';
   src: url('./assets/fonts/Gilroy-Bold.ttf') format('truetype');
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'GilroyLight';
+  src: url('./assets/fonts/Gilroy-Light.otf') format('opentype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
 }
 
 @layer base {
@@ -21,12 +37,9 @@
     @apply box-border;
   }
 
+
+
   body {
     @apply m-0 min-h-screen antialiased;
-    font-family: 'Urbanist', system-ui, -apple-system, sans-serif;
-  }
-
-  html {
-    @apply scroll-smooth;
   }
 }

@@ -17,19 +17,18 @@ const HeroSection: React.FC = () => {
         <div className="">
           <div className="text-white z-10">
             <h1
-              className="text-5xl lg:text-6xl xl:text-7xl font-gilroy font-bold mb-6 leading-tight"
-              style={{ fontFamily: "'Gilroy', system-ui, -apple-system, sans-serif" }}
+              className="text-5xl lg:text-6xl xl:text-7xl mb-6 leading-tight font-['Gilroy']"
             >
               Trade Forex <br /> <span className="text-white">with Premier <br /> Markets</span>
             </h1>
-            <p className="text-lg lg:text-xl mb-10 text-white leading-relaxed max-w-xl urbanist !font-thin">
+            <p className="text-lg lg:text-xl mb-10 text-white leading-relaxed max-w-xl font-light font-['UrbanistRegular']">
               Access global markets with advanced trading <br /> <span className="text-white">tools, competitive spreads, and institutional <br/> <span className="text-white">grade execution.</span></span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-premier-red px-8 py-3.5 font-bold text-base hover:bg-gray-50 transition-colors shadow-lg !rounded-full cursor-pointer text-[red]">
+              <button className="bg-white text-premier-red px-8 py-3.5 font-['Urbanist'] text-base hover:bg-gray-50 transition-colors shadow-lg !rounded-full cursor-pointer text-[red]">
                 Start Trading
               </button>
-              <button className="bg-transparent text-white border-2 border-white px-8 py-3.5 font-bold text-base hover:bg-white/10 transition-colors !rounded-full cursor-pointer">
+              <button className="bg-transparent text-white border-2 border-white px-8 py-3.5 font-['Urbanist'] text-base hover:bg-white/10 transition-colors !rounded-full cursor-pointer">
                 Try Demo Account
               </button>
             </div>
