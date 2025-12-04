@@ -4,4 +4,5 @@ export { default as Layout } from './Layout'
 export { default as Header } from './Header'
 export { default as HeroSection } from './HeroSection'
 export { default as FinancialCards } from './FinancialCards'
+export { default as MarketsSection } from './MarketsSection'
 
