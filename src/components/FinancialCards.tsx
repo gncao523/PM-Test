@@ -10,16 +10,16 @@ interface FinancialCardProps {
 
 const FinancialCard: React.FC<FinancialCardProps> = ({ icon, label, value, change, isPositive }) => {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col items-center">
+    <div className="bg-white rounded-xl p-6 flex flex-col items-center shadow-md">
       <div className="mb-4">{icon}</div>
       <div className="text-sm font-bold text-gray-700 mb-3">{label}</div>
-      {/* Mini chart placeholder */}
+      {/* Mini chart with colored trend line */}
       <div className="w-20 h-10 mb-3 flex items-end justify-center gap-1">
-        <div className="w-1.5 h-4 bg-gray-300 rounded-t"></div>
-        <div className="w-1.5 h-5 bg-gray-300 rounded-t"></div>
-        <div className="w-1.5 h-6 bg-gray-300 rounded-t"></div>
-        <div className="w-1.5 h-4 bg-gray-300 rounded-t"></div>
-        <div className="w-1.5 h-3 bg-gray-300 rounded-t"></div>
+        <div className={`w-1.5 h-3 ${isPositive ? 'bg-green-500' : 'bg-red-500'} rounded-t`}></div>
+        <div className={`w-1.5 h-4 ${isPositive ? 'bg-green-500' : 'bg-red-500'} rounded-t`}></div>
+        <div className={`w-1.5 h-5 ${isPositive ? 'bg-green-500' : 'bg-red-500'} rounded-t`}></div>
+        <div className={`w-1.5 h-6 ${isPositive ? 'bg-green-500' : 'bg-red-500'} rounded-t`}></div>
+        <div className={`w-1.5 h-5 ${isPositive ? 'bg-green-500' : 'bg-red-500'} rounded-t`}></div>
       </div>
       <div className="text-xl font-bold text-gray-900 mb-1">{value}</div>
       <div className={`text-sm font-semibold ${isPositive ? 'text-green-600' : 'text-red-600'}`}>
@@ -33,55 +33,93 @@ const FinancialCards: React.FC = () => {
   const cards = [
     {
       icon: (
-        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-          <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
-          </svg>
+        <div className="relative w-12 h-12">
+          {/* US Flag (top, partially visible) */}
+          <div className="absolute top-0 left-0 w-10 h-6 bg-blue-600 rounded overflow-hidden" style={{ zIndex: 2 }}>
+            <div className="h-full flex flex-col">
+              <div className="h-1 bg-red-600"></div>
+              <div className="h-1 bg-white"></div>
+              <div className="h-1 bg-red-600"></div>
+              <div className="h-1 bg-white"></div>
+              <div className="h-1 bg-red-600"></div>
+              <div className="h-1 bg-white"></div>
+            </div>
+            <div className="absolute top-0 left-0 w-4 h-3 bg-blue-600"></div>
+          </div>
+          {/* EU Flag (bottom, fully visible) */}
+          <div className="absolute bottom-0 right-0 w-10 h-6 bg-blue-500 rounded overflow-hidden" style={{ zIndex: 1 }}>
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
+                <div className="text-[6px] text-blue-500 font-bold">★</div>
+              </div>
+            </div>
+          </div>
         </div>
       ),
       label: 'USD/EUR',
       value: '0.00014',
       change: '-234.45',
-      isPositive: false,
+      isPositive: true, // Green trend for USD/EUR
     },
     {
       icon: (
-        <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-          <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+        <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-md">
+          <div className="flex flex-col gap-0.5">
+            <div className="w-6 h-1 bg-yellow-700 rounded"></div>
+            <div className="w-6 h-1 bg-yellow-700 rounded"></div>
+            <div className="w-6 h-1 bg-yellow-700 rounded"></div>
+          </div>
         </div>
       ),
       label: 'XAUUSD',
       value: '0.00014',
       change: '-234.45',
-      isPositive: false,
+      isPositive: false, // Red trend for XAUUSD
     },
     {
       icon: (
-        <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-          <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
-          </svg>
+        <div className="relative w-12 h-12">
+          {/* US Flag (top, partially visible) */}
+          <div className="absolute top-0 left-0 w-10 h-6 bg-blue-600 rounded overflow-hidden" style={{ zIndex: 2 }}>
+            <div className="h-full flex flex-col">
+              <div className="h-1 bg-red-600"></div>
+              <div className="h-1 bg-white"></div>
+              <div className="h-1 bg-red-600"></div>
+              <div className="h-1 bg-white"></div>
+              <div className="h-1 bg-red-600"></div>
+              <div className="h-1 bg-white"></div>
+            </div>
+            <div className="absolute top-0 left-0 w-4 h-3 bg-blue-600"></div>
+          </div>
+          {/* EU Flag (bottom, fully visible) */}
+          <div className="absolute bottom-0 right-0 w-10 h-6 bg-blue-500 rounded overflow-hidden" style={{ zIndex: 1 }}>
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
+                <div className="text-[6px] text-blue-500 font-bold">★</div>
+              </div>
+            </div>
+          </div>
         </div>
       ),
-      label: 'GBP/USD',
+      label: 'USD/EUR',
       value: '0.00014',
       change: '-234.45',
-      isPositive: false,
+      isPositive: true, // Green trend for USD/EUR
     },
     {
       icon: (
-        <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-          <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
-          </svg>
+        <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-md">
+          <div className="flex flex-col gap-0.5">
+            <div className="w-6 h-1 bg-yellow-700 rounded"></div>
+            <div className="w-6 h-1 bg-yellow-700 rounded"></div>
+            <div className="w-6 h-1 bg-yellow-700 rounded"></div>
+          </div>
         </div>
       ),
-      label: 'EUR/USD',
+      label: 'XAUUSD',
       value: '0.00014',
       change: '-234.45',
-      isPositive: false,
+      isPositive: false, // Red trend for XAUUSD
     },
   ]
 
