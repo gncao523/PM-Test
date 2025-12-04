@@ -12,6 +12,7 @@ export default {
       },
       fontFamily: {
         sans: ['Urbanist', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        gilroy: ['Gilroy', 'system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },

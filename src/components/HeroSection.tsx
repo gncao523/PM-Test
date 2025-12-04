@@ -1,23 +1,35 @@
 import React from 'react'
+import bannerImage from '../assets/images/banner.png'
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-premier-red via-premier-red-dark to-black min-h-[700px] flex items-center overflow-hidden">
+    <section 
+      className="relative min-h-[700px] flex items-center overflow-hidden"
+      style={{
+        backgroundImage: `url(${bannerImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div className="text-white z-10">
-            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-              Trade Forex with Premier Markets
+            <h1 
+              className="text-5xl lg:text-6xl xl:text-7xl font-gilroy font-bold mb-6 leading-tight"
+              style={{ fontFamily: "'Gilroy', system-ui, -apple-system, sans-serif" }}
+            >
+              Trade Forex <br/> <span className="text-white">with Premier Markets</span>
             </h1>
-            <p className="text-lg lg:text-xl mb-10 text-white/95 leading-relaxed max-w-xl">
-              Access global markets with advanced trading tools, competitive spreads, and institutional grade execution.
+            <p className="text-lg lg:text-xl mb-10 text-white/95 leading-relaxed max-w-xl urbanist !font-thin">
+              Access global markets with advanced trading <br/> <span className="text-white">tools, competitive spreads, and institutional grade execution.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-premier-red border-2 border-premier-red px-8 py-3.5 rounded-lg font-bold text-base hover:bg-gray-50 transition-colors shadow-lg">
+              <button className="bg-white text-premier-red px-8 py-3.5 font-bold text-base hover:bg-gray-50 transition-colors shadow-lg !rounded-full cursor-pointer text-[red]">
                 Start Trading
               </button>
-              <button className="bg-transparent text-white border-2 border-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-white/10 transition-colors">
+              <button className="bg-transparent text-white border-2 border-white px-8 py-3.5 font-bold text-base hover:bg-white/10 transition-colors !rounded-full cursor-pointer">
                 Try Demo Account
               </button>
             </div>
@@ -135,6 +147,22 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Curved bottom edge */}
+      <div className="absolute bottom-0 left-0 w-full">
+        <svg 
+          viewBox="0 0 1440 120" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-auto"
+          preserveAspectRatio="none"
+        >
+          <path 
+            d="M0 120L60 100C120 80 240 40 360 30C480 20 600 40 720 50C840 60 960 60 1080 50C1200 40 1320 20 1380 10L1440 0V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" 
+            fill="white"
+          />
+        </svg>
       </div>
     </section>
   )

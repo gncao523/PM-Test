@@ -138,11 +138,6 @@ const Header: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </a>
-              
-              {/* Mobile Register button */}
-              <button className="bg-premier-red text-white px-6 py-2.5 rounded-md text-sm font-semibold hover:bg-premier-red-dark transition-colors shadow-sm w-full sm:hidden">
-                Register
-              </button>
 
               {/* Mobile Partner link */}
               <a href="#" className="flex items-center justify-between text-premier-red hover:text-premier-red-dark text-sm font-semibold py-2">
@@ -151,6 +146,11 @@ const Header: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
+              
+              {/* Mobile Register button */}
+              <button className="bg-[red] text-white px-6 py-2.5 rounded-md text-sm font-semibold hover:bg-premier-red-dark transition-colors shadow-sm w-full sm:hidden">
+                Register
+              </button>
             </div>
           </div>
         )}
