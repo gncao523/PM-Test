@@ -1,8 +1,10 @@
-# PM-Test - Landing Page
+# PM-Test
 
-A modern landing page implementation built with React, TypeScript, Tailwind CSS, and Vite.
+Landing page implementation for Obermind's Web Developer technical assessment.
 
-## 🚀 Getting Started
+This project implements the Home Page design from the provided Figma file using React, TypeScript, and Tailwind CSS.
+
+## How to Install and Run
 
 ### Prerequisites
 
@@ -13,7 +15,7 @@ A modern landing page implementation built with React, TypeScript, Tailwind CSS,
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone 'https://github.com/gncao523/PM-Test'
 cd PM-Test
 ```
 
@@ -43,38 +45,7 @@ The production build will be in the `dist` directory.
 npm run preview
 ```
 
-## 📁 Project Structure
-
-```
-PM-Test/
-├── public/              # Static assets
-├── src/
-│   ├── assets/         # Images, fonts, and other assets
-│   │   └── images/     # Image files
-│   ├── components/     # Reusable React components
-│   │   ├── Button.tsx  # Example button component
-│   │   └── index.ts    # Component exports
-│   ├── hooks/          # Custom React hooks
-│   │   └── index.ts    # Hook exports
-│   ├── pages/          # Page components
-│   │   └── HomePage.tsx # Main landing page
-│   ├── styles/         # Additional stylesheets
-│   ├── types/          # TypeScript type definitions
-│   │   └── index.ts
-│   ├── utils/          # Utility functions
-│   │   └── index.ts
-│   ├── App.tsx         # Main app component
-│   ├── main.tsx        # Application entry point
-│   └── index.css       # Global styles with Tailwind
-├── index.html          # HTML template
-├── package.json        # Dependencies and scripts
-├── tailwind.config.js  # Tailwind CSS configuration
-├── postcss.config.js   # PostCSS configuration
-├── tsconfig.json       # TypeScript configuration
-└── vite.config.ts      # Vite configuration
-```
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React 19** - UI library
 - **TypeScript** - Type safety
@@ -82,84 +53,111 @@ PM-Test/
 - **Tailwind CSS** - Utility-first CSS framework
 - **ESLint** - Code linting
 
-## 📝 Assumptions Made
+## Project Structure
 
-- The landing page will be responsive and work on mobile, tablet, and desktop viewports
-- All assets (images, icons) will be extracted from Figma and placed in `src/assets/images/`
-- Colors, typography, and spacing will be configured in Tailwind based on Figma design tokens
-- No backend integration is required - this is a static frontend implementation
+```
+PM-Test/
+├── src/
+│   ├── assets/         # Images, fonts, and other assets
+│   │   ├── fonts/      # Font files
+│   │   └── images/     # Image files
+│   ├── components/     # Reusable React components
+│   │   ├── chart/      # Chart-related components
+│   │   └── ...         # Other section components
+│   ├── pages/          # Page components
+│   │   └── HomePage.tsx # Main landing page
+│   ├── types/          # TypeScript type definitions
+│   ├── utils/          # Utility functions
+│   ├── App.tsx         # Main app component
+│   ├── main.tsx        # Application entry point
+│   └── index.css       # Global styles with Tailwind
+├── index.html          # HTML template
+├── package.json        # Dependencies and scripts
+├── tailwind.config.js  # Tailwind CSS configuration
+└── vite.config.ts      # Vite configuration
+```
 
-## 🎨 Design Implementation
+## Assumptions Made
 
-The landing page design is based on the provided Figma file:
-[Figma Design Link](https://www.figma.com/design/wFgah66jxg7cbKv7NFLqWW/Landing-Page---PM?node-id=3787-43142&t=NNPF6mKgWTJQVj4k-1)
+During implementation, the following assumptions were made:
 
-### Next Steps for Implementation:
+1. **Responsive Design**: The page is implemented to be responsive across mobile, tablet, and desktop viewports. Breakpoints follow standard Tailwind conventions (sm, md, lg, xl).
 
-1. Extract design tokens (colors, fonts, spacing) from Figma
-2. Configure Tailwind theme with custom values
-3. Create component structure matching the design:
-   - Header/Navigation
-   - Hero section
-   - Feature sections
-   - Footer
-4. Implement responsive breakpoints
-5. Add animations and transitions as per design
-6. Optimize images and assets
+2. **Assets**: All images and fonts were extracted from the Figma design and placed in `src/assets/`. Some assets may have been optimized or adjusted for web use.
 
-## 🔧 Available Scripts
+3. **Typography**: Custom fonts (Gilroy, Urbanist, Roboto) are loaded from local files. Font weights and sizes were matched to the Figma design as closely as possible.
+
+4. **Colors**: Colors were extracted from Figma and configured in Tailwind CSS. Some color values may have slight variations due to color space conversions.
+
+5. **Interactive Elements**: 
+   - Buttons and links are styled but may not have full functionality (no backend integration)
+   - Chart components display static data or placeholder content
+   - Form elements are presentational only
+
+6. **Animations**: Subtle hover effects and transitions were added where appropriate, but complex animations from Figma may have been simplified for implementation.
+
+7. **Browser Compatibility**: The implementation targets modern browsers (Chrome, Firefox, Safari, Edge) with ES6+ support.
+
+8. **Content**: All text content matches the Figma design. Placeholder or sample data is used where dynamic content would be expected.
+
+## Ambiguities Encountered
+
+When certain aspects of the design were unclear or ambiguous, the following reasonable assumptions were made:
+
+1. **Chart/Graph Implementation**: The Figma design showed static chart images for market data visualization. Since no specific charting library or interactive behavior was specified, I implemented these as static images matching the design. In a production environment, these would be replaced with interactive charting libraries (e.g., Chart.js, Recharts, or TradingView widgets) connected to real-time data sources.
+
+2. **Video Content**: Video sections in the design were represented as static frames. Without explicit video source requirements or player specifications, I implemented these sections using static images that match the design. In production, these would be implemented using HTML5 video players or embedded video solutions with proper controls and responsive behavior.
+
+## What I Would Improve With More Time
+
+1. **Performance Optimization**
+   - Implement code splitting and lazy loading for components
+   - Optimize images with next-gen formats (WebP, AVIF) and responsive images
+   - Add image lazy loading with Intersection Observer
+   - Implement virtual scrolling for long lists if needed
+
+2. **Accessibility**
+   - Enhanced ARIA labels and semantic HTML
+   - Comprehensive keyboard navigation support
+   - Screen reader optimization
+   - Focus management and visible focus indicators
+   - Color contrast verification for WCAG compliance
+
+3. **Testing**
+   - Unit tests with Vitest for utility functions
+   - Component tests with React Testing Library
+   - Visual regression testing
+   - Cross-browser testing automation
+
+4. **Code Quality**
+   - More comprehensive TypeScript types and interfaces
+   - Extract reusable hooks for common patterns
+   - Better error boundaries and error handling
+   - Consistent code formatting with Prettier
+   - Pre-commit hooks with Husky for quality checks
+
+5. **Features & Polish**
+   - Smooth scroll animations with Intersection Observer
+   - Parallax effects where appropriate
+   - Loading states and skeleton screens
+   - Form validation if interactive forms are needed
+   - Analytics integration hooks
+
+6. **Developer Experience**
+   - Storybook for component documentation and visual testing
+   - Better component prop documentation
+   - Development environment improvements
+   - Build optimization and bundle analysis
+
+7. **Design Fidelity**
+   - Pixel-perfect spacing and alignment verification
+   - Exact color matching with design tokens
+   - Animation timing and easing curve matching
+   - Responsive breakpoint refinement
+
+## Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
-
-## 📦 Component Architecture
-
-Components are organized for reusability and maintainability:
-
-- **Atomic Design Principles**: Components are structured to be reusable
-- **Type Safety**: All components use TypeScript for type checking
-- **Props Interface**: Clear prop definitions for each component
-- **Styling**: Tailwind CSS for consistent styling
-
-## 🚧 Future Improvements
-
-With more time, I would:
-
-1. **Performance Optimization**
-   - Implement code splitting and lazy loading
-   - Optimize images with next-gen formats (WebP, AVIF)
-   - Add service worker for offline support
-
-2. **Accessibility**
-   - Enhanced ARIA labels and roles
-   - Keyboard navigation improvements
-   - Screen reader optimization
-   - Focus management
-
-3. **Testing**
-   - Unit tests with Vitest
-   - Component tests with React Testing Library
-   - E2E tests with Playwright or Cypress
-
-4. **Developer Experience**
-   - Storybook for component documentation
-   - Pre-commit hooks with Husky
-   - Automated formatting with Prettier
-
-5. **Features**
-   - Smooth scroll animations
-   - Intersection Observer for scroll-triggered animations
-   - Form validation if contact forms are needed
-   - Analytics integration
-
-6. **Code Quality**
-   - More comprehensive TypeScript types
-   - Custom ESLint rules
-   - Better error boundaries
-   - Logging and error tracking
-
-## 📄 License
-
-This project is created for the Obermind technical assessment.
