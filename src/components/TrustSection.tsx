@@ -31,20 +31,14 @@ const TrustSection: React.FC = () => {
                 </div>
 
                 {/* Bottom Section - Red Banner */}
-                <div className="relative h-[373px] flex items-center justify-end"
-                    style={{
-                        backgroundImage: `url(${bannerImage})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat'
-                    }}
-                >
-                    <div className="relative z-10 px-16 mt-24">
+                <div className="relative h-auto sm:h-[373px] flex items-center justify-center sm:justify-end">
+                    <img src={bannerImage} alt="banner" className="hidden sm:block absolute top-0 left-0 w-full h-full object-cover z-0" />
+                    <div className="relative z-10 px-4 sm:px-8 md:px-12 lg:px-16 mt-8 sm:mt-24">
                         <div className="text-white flex flex-col items-start justify-center">
-                            <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-['Gilroy'] font-bold mb-6 leading-tight">
+                            <h3 className="text-3xl sm:text-2xl lg:text-3xl xl:text-4xl font-['Gilroy'] font-bold mb-6 leading-tight text-[red] sm:text-white">
                                 Everything you need to <br/> trade the markets
                             </h3>
-                            <div className="inline-block bg-gradient-to-r from-[#6D0002] to-[#FFFFFF] p-[2px] rounded-[55px]">
+                            <div className="bg-gradient-to-r from-[#6D0002] to-[#FFFFFF] p-[2px] rounded-[55px] flex justify-center items-center">
                                 <button className="w-full px-10 py-4 bg-gradient-to-r from-[#390507] to-[#962020] shadow-[0px_4px_34px_rgba(255,255,255,0.25),0px_4px_34px_rgba(255,0,0,0.25),0px_4px_24px_rgba(255,74,74,0.25),inset_0px_3px_10px_rgba(255,255,255,0.25),inset_0px_4px_24px_rgba(152,14,14,0.25),inset_0px_2px_5px_rgba(255,7,7,0.75)] rounded-[55px] text-white font-['Urbanist'] text-base cursor-pointer">
                                     Explore Accounts
                                 </button>
