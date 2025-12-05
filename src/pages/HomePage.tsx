@@ -7,6 +7,8 @@ import ChartSection from '../components/ChartSection'
 import EmpowerSection from '../components/EmpowerSection'
 import WithdrawSection from '../components/WithdrawSection'
 import TrustSection from '../components/TrustSection'
+import TradeSection from '../components/TradeSection'
+import PremierSection from '../components/PremierSection'
 
 const HomePage: React.FC = () => {
   return (
@@ -19,6 +21,8 @@ const HomePage: React.FC = () => {
       <ChartSection />
       <EmpowerSection />
       <WithdrawSection />
+      <TradeSection />
+      <PremierSection />
     </div>
   )
 }
