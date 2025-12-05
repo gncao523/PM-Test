@@ -60,9 +60,9 @@ const TradeSection: React.FC = () => {
                 <div className="relative rounded-3xl overflow-hidden h-60">
                     <div className="relative">
                         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                            <img src={mIndex} alt="market index" className="absolute top-0 left-0 z-0 w-full h-97 object-cover rounded-3xl" />
+                            <img src={mIndex} alt="market index" className="absolute top-0 left-0 z-0 w-full h-60 object-cover rounded-3xl" />
                             {/* Left Content */}
-                            <div className="relative top-22 left-28 z-10">
+                            <div className="relative top-16 left-28 z-10">
                                 <h3 className="text-2xl font-['Urbanist'] text-white mb-4 z-10">
                                     Premier Market - Market Cap Weighted PR (BKP)
                                 </h3>

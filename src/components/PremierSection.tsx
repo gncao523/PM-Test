@@ -1,4 +1,5 @@
 import React from 'react'
+import sectionBg from '../assets/images/premierbg.png'
 
 // Icon components
 const HeadphoneIcon: React.FC = () => (
@@ -98,8 +99,9 @@ const PremierSection: React.FC = () => {
   }
 
   return (
-    <section className="py-20 px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative">
+      <img src={sectionBg} alt="premier" className="absolute top-0 left-0 w-full h-300 object-cover z-0" />
+      <div className="relative top-0 max-w-7xl mx-auto py-20 px-8 z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-['Gilroy'] text-black mb-4">
