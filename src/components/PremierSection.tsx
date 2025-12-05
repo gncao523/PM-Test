@@ -100,7 +100,7 @@ const PremierSection: React.FC = () => {
 
   return (
     <section className="relative">
-      <img src={sectionBg} alt="premier" className="absolute top-0 left-0 w-full h-300 object-cover z-0" />
+      <img src={sectionBg} alt="premier" className="absolute top-0 left-0 w-full h-400 object-cover z-0" />
       <div className="relative top-0 max-w-7xl mx-auto py-20 px-8 z-10">
         {/* Header */}
         <div className="text-center mb-12">
